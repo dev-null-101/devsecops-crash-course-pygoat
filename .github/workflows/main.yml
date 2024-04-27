@@ -1,8 +1,7 @@
 name: CI
 
 on: [push] # for all branches
-
-on: workflow_dispatch
+  workflow_dispatch:
 
 jobs:
  sast_scan:
