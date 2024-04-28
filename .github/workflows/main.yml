@@ -53,19 +53,21 @@ jobs:
    - name: Build Docker Image
      run: docker build -f Dockerfile -t myapp:latest .
 
-   # - name: Docker Scout Scan
-     # run: |
-       # curl -fsSL https://raw.githubusercontent.com/docker/scout-cli/main/install.sh -o install-scout.sh
-       # sh install-scout.sh
-       # echo ${{ secrets.REPO_PWD }} | docker login -u ${{ secrets.REPO_USER }} --password-stdin
-       # docker scout quickview
-       # docker scout cves
+   - name: Docker Scout Scan
+     run: |
+       curl -fsSL https://raw.githubusercontent.com/docker/scout-cli/main/install.sh -o install-scout.sh
+       sh install-scout.sh
+       echo ${{ secrets.REPO_PWD }} | docker login -u ${{ secrets.REPO_USER }} --password-stdin
+       docker scout quickview
+       docker scout cves
 
    - name: Docker Scout Scan
      uses: docker/scout-action@v1.0.9
      with:
        dockerhub-user: ${{ secrets.REPO_USER }}
        dockerhub-password: ${{ secrets.REPO_PWD }}
+       # quickview - display overviwe of an image and gives you image refresh and update recommendations
+       # cves - analyzes a software artifact for vulnerabilities and displays CVEs in a software artifact
        command: quickview,cves
        only-severities: critical,high
        sarif-file: scout-report.sarif
@@ -76,8 +78,6 @@ jobs:
      with:
        name: docker-scout-findings
        path: scout-report.sarif
-
-
 
 
    
