@@ -61,16 +61,16 @@ jobs:
        docker scout quickview
        docker scout cves
 
-   - name: Docker Scout Scan
-     uses: docker/scout-action@v1.0.9
-     with:
-       dockerhub-user: ${{ secrets.REPO_USER }}
-       dockerhub-password: ${{ secrets.REPO_PWD }}
-       # quickview - display overviwe of an image and gives you image refresh and update recommendations
-       # cves - analyzes a software artifact for vulnerabilities and displays CVEs in a software artifact
-       command: quickview,cves
-       only-severities: critical,high
-       sarif-file: scout-report.sarif
+  #  - name: Docker Scout Scan
+  #    uses: docker/scout-action@v1.0.9
+  #    with:
+  #      dockerhub-user: ${{ secrets.REPO_USER }}
+  #      dockerhub-password: ${{ secrets.REPO_PWD }}
+  #      # quickview - display overviwe of an image and gives you image refresh and update recommendations
+  #      # cves - analyzes a software artifact for vulnerabilities and displays CVEs in a software artifact
+  #      command: quickview,cves
+  #      only-severities: critical,high
+  #      sarif-file: scout-report.sarif
 
    - name: Upload Artifact
      uses: actions/upload-artifact@v3
