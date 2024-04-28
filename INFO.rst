@@ -1,16 +1,12 @@
 Open Web Application Security Project
 =====================================
 
-Virtual Network
----------------
-| Virtual Network
-
 Challenges of impementing Security
 ----------------------------------
 | Focus on fast development and new features. (incentivize)
-    • Provides business value.
-    • Bring customer, Direct value for users
-    • Bring money, staying ahead of competitors
+* Provides business value.
+* Bring customer, Direct value for users
+* Bring money, staying ahead of competitors
 | No rewards for implementing great security (Goalkeeper)
 • Developers implementing new featurs (Goal scorer)
 • Security is an afterthought.
