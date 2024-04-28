@@ -1,4 +1,5 @@
-name: CI for  OWASP (Open Web Application Security Project)
+# Open Web Application Security Project
+name: CI for  OWASP 
 
 on: # [push] # for all branches
   push: 
