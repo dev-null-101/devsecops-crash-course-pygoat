@@ -4,26 +4,26 @@ Open Web Application Security Project
 Challenges of impementing Security
 ----------------------------------
 Focus on fast development and new features. (incentivize)
-    • Provides business value.
-    • Bring customer, Direct value for users
-    • Bring money, staying ahead of competitors
-• No rewards for implementing great security (Goalkeeper)
-• Developers implementing new featurs (Goal scorer)
-• Security is an afterthought.
-• Application systems become more complex
-• Microservices
-• Containers
-• Kubernetes
-• Cloud
-• Multiple Databases
-• Caching
-• No SQL
-• Primary
-• SQL
-• Memory
-• API
-• Many Entrypoints
-• Large Attack Surface
+        • Provides business value.
+        • Bring customer, Direct value for users
+        • Bring money, staying ahead of competitors
+    • No rewards for implementing great security (Goalkeeper)
+    • Developers implementing new featurs (Goal scorer)
+    • Security is an afterthought.
+Application systems become more complex
+    • Microservices
+    • Containers
+    • Kubernetes
+    • Cloud
+    • Multiple Databases
+        • Caching
+        • No SQL
+        • Primary
+        • SQL
+        • Memory
+    • API
+    • Many Entrypoints
+    • Large Attack Surface
 
 Vulnerabilities of each layer
 • Application
