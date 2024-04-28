@@ -26,12 +26,13 @@ jobs:
    - name: Install Bandit #  Tool to find common security issues in Python code
      run: pip install bandit
 
-   - name: Run Bandit Scan
+   - name: Run Bandit Scan # https://pypi.org/project/bandit/0.17.3/
      run: bandit -ll -ii -r . -f json -o bandit-report.json
 
    - name: Upload Artifact
      uses: actions/upload-artifact@v4
-     if: always()
+     # always will handle the failure in scan which is expected due to vuln
+     if: always() 
      with:
       name: bandit-findings
       path: bandit-report.json
