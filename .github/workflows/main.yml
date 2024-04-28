@@ -43,7 +43,7 @@ jobs:
 
    steps:
    - name: Checkout code
-     uses: actions/checkout@v2
+     uses: actions/checkout@v4
 
    - name: Set up Docker
      uses: docker-practice/actions-setup-docker@v1
@@ -74,7 +74,7 @@ jobs:
        sarif-file: scout-report.sarif
 
    - name: Upload Artifact
-     uses: actions/upload-artifact@v3
+     uses: actions/upload-artifact@v4
      if: always()
      with:
        name: docker-scout-findings
